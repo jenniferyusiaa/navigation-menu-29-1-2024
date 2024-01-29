@@ -1,0 +1,124 @@
+.header {
+  position: fixed;
+  display: block;
+  background: var(--lightBeige);
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid rgba(77, 61, 48, 0.2);
+  z-index: 2;
+  padding: max(8px, 1.2vw);
+}
+
+.headerMain {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--darkBrown);
+  font-size: max(14px, 0.8vw);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.headerMainLeft {
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.headerMainMiddle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: max(15px, 1vw);
+  cursor: pointer;
+}
+
+.hamburgerNav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: max(7.5px, 0.5vw);
+  width: max(10px, 1vw);
+}
+
+.hamburgerNav span {
+  position: relative;
+  display: block;
+  background-color: black;
+  height: 1px;
+  width: 24px;
+  transition: all 1s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.hamburgerCrossed span {
+  transform: rotate(-45deg);
+  transform-origin: 67% 50%;
+  transition: all 1s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.hamburgerCrossed span:nth-of-type(2) {
+  transform-origin: 67% 50%;
+  transform: rotate(45deg);
+}
+
+.hamburgerLabel {
+  position: relative;
+  height: max(20px, 0.5vw);
+}
+
+.hamburgerLabel p {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.headerMainRight {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: max(30px, 1vw);
+}
+
+.cartWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: max(7px, 1vw);
+  cursor: pointer;
+}
+
+.background {
+  position: fixed;
+  display: block;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.65;
+  z-index: -1;
+}
+
+@media screen and (max-width: 500px) {
+  .shopLabel {
+    display: none;
+  }
+}

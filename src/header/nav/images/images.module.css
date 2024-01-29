@@ -1,0 +1,15 @@
+.images img {
+  flex: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: max(10%, 30%);
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .images img {
+    display: none;
+  }
+}

@@ -1,0 +1,50 @@
+.footer {
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: clamp(65vw, 100%, 600px);
+  font-size: max(12px, 0.1vw);
+  font-weight: 500;
+  padding-block: max(1px, 1vh);
+}
+
+.navFoot {
+  display: flex;
+  padding-bottom: max(10px, 1vh);
+}
+
+.navFoot:nth-child(4) {
+  display: block;
+}
+
+.navFoot p {
+  color: var(--lightBrown);
+}
+
+.navFoot:nth-child(4) p {
+  color: inherit;
+}
+
+.navFoot a {
+  position: relative;
+}
+
+.navFoot a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: black;
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.navFoot a:hover::before {
+  width: 100%;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+}
